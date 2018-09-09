@@ -1,0 +1,28 @@
+<div class="header-action-buttons">
+    <button type="submit" class="btn btn-danger" (click)="logout()">Logout</button>
+</div>
+<div class="parent-container">
+  <div class="filter-and-sort">
+    <h3>Sorting</h3>
+    <app-sorting (selectedFilter)="updateListWithSorting($event)"></app-sorting>
+  </div>
+  <div class="products-container">
+    <div class="search-bar">
+      <input class="form-control" placeholder="Start typing to search..." type="text" [(ngModel)]="searchTerm" (keyup)="onSearchTermChange()">
+    </div>
+    <div class="products">
+      <table>
+        <thead>
+          <th>SKU</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Title</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productsList | async" class="product" [app-product-details]="product">
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

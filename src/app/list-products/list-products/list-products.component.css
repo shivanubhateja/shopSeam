@@ -1,0 +1,39 @@
+.parent-container{
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 10px;
+}
+.filter-and-sort{
+    flex: 1;
+}
+.products-container{
+    flex: 4;
+}
+.products-container .product{
+    padding: 0 2%;
+    margin-bottom: 10px;
+}
+.products-container table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+th{
+    text-align: center;
+}
+.products{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-bar{
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+tr{
+    border-top: 1px solid #ddd;
+}
+.header-action-buttons{
+    text-align: right;
+}

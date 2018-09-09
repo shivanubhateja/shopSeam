@@ -1,0 +1,12 @@
+<div class="sorting-container">
+  <div>
+    <p>Sort By Price</p>
+    <div *ngFor='let sortOption of sortingFeatires.options'>
+      <label>
+        <input type="radio" name="lalala" [value]="sortOption" (change)="filterChanged(sortOption)">
+        {{sortOption}}
+      </label>
+      </div>
+    </div>
+</div>
+  

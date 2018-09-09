@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Login</h1>
+  <form #loginForm="ngForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input [(ngModel)]="loginDetails.userName" name="userName" type="text" class="form-control" id="username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="loginDetails.password" name="password" class="form-control" id="password" required>
+    </div>
+    <h3 class="errorStyles">
+      {{loginError}}
+    </h3>
+    <button type="submit" class="btn btn-success" (click)="onLoginFormSubmit()">Submit</button>
+  </form>
+</div>
+
+<h2>
+  Points to note.
+</h2>
+<ul>
+  <li>Use Username = "admin" and password = "admin123"</li>
+  <li>Debounce is implemented from scratch for searching the product list.</li>
+  <li>Route guard is implemented so that user cannot naviate to /products page without logining in by directly typing the url in address bar</li>
+  <li>Once user is logged in the login state is stored in local storage. So if you want to test route guards, remember to logout from /products page.</li>
+  <li>Website is responsive. UI is kept simple without considering design.</li>
+  <li>Flex layout is used to achieve responsiveness.</li>
+</ul>
